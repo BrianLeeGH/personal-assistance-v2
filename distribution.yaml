@@ -1,0 +1,12 @@
+name: personal-assistance-v2
+version: 0.1.0
+description: "Single-user personal assistant with sandboxed tools and profile-scoped self-growth."
+hermes_requires: ">=0.19.0"
+author: Brian Li
+license: MIT
+distribution_owned:
+  - distribution.yaml
+  - SOUL.md
+  - config.yaml
+  - skills/
+

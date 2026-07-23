@@ -1,0 +1,73 @@
+terminal:
+  backend: docker
+  home_mode: profile
+  timeout: 180
+  docker_image: nikolaik/python-nodejs:python3.11-nodejs20
+  docker_forward_env: []
+  docker_env: {}
+  docker_volumes: []
+  docker_mount_cwd_to_workspace: false
+  docker_network: false
+  docker_extra_args: []
+  docker_run_as_host_user: false
+  container_cpu: 1
+  container_memory: 2048
+  container_disk: 10240
+  container_persistent: true
+  docker_persist_across_processes: true
+  docker_orphan_reaper: true
+  lifetime_seconds: 300
+
+security:
+  redact_secrets: true
+  tirith_enabled: true
+
+approvals:
+  mode: smart
+
+agent:
+  max_turns: 90
+  tool_use_enforcement: true
+  disabled_toolsets:
+    - session_search
+
+memory:
+  memory_enabled: true
+  user_profile_enabled: true
+  write_approval: false
+
+skills:
+  write_approval: false
+
+curator:
+  enabled: true
+
+compression:
+  enabled: true
+  threshold: 0.50
+  target_ratio: 0.20
+
+checkpoints:
+  enabled: true
+  max_snapshots: 10
+
+plugins:
+  enabled:
+    - soul-manage
+  disabled: []
+
+platform_toolsets:
+  api_server:
+    - browser
+    - code_execution
+    - file
+    - image_gen
+    - memory
+    - no_mcp
+    - skills
+    - soul
+    - terminal
+    - todo
+    - vision
+    - web
+

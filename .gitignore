@@ -1,0 +1,13 @@
+.env
+auth.json
+memories/
+sessions/
+logs/
+workspace/
+plans/
+home/
+local/
+state.db*
+*_cache/
+__pycache__/
+
