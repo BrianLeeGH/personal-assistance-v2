@@ -7,7 +7,7 @@ terminal:
   docker_env: {}
   docker_volumes: []
   docker_mount_cwd_to_workspace: false
-  docker_network: false
+  docker_network: true
   docker_extra_args: []
   docker_run_as_host_user: false
   container_cpu: 1
@@ -70,4 +70,3 @@ platform_toolsets:
     - todo
     - vision
     - web
-
