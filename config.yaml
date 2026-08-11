@@ -31,6 +31,7 @@ agent:
   tool_use_enforcement: true
   disabled_toolsets:
     - session_search
+    - clarify
 
 memory:
   memory_enabled: true
