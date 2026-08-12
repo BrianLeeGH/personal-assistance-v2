@@ -6,6 +6,10 @@ terminal:
   docker_forward_env: []
   docker_env: {}
   docker_volumes: []
+  # per-session 容器隔离：每个会话容器只挂载该会话注册的 cwd（per-user workspace），
+  # 绕开进程级 TERMINAL_CWD 单例。与宿主 /root/.hermes/.env 的
+  # TERMINAL_CONTAINER_PERSISTENT / TERMINAL_DOCKER_MOUNT_CWD_TO_WORKSPACE 必须一致
+  # （.env 经 systemd EnvironmentFile 在进程启动时注入，先于 config bridge）。
   docker_mount_cwd_to_workspace: true
   docker_network: true
   cwd: /home/hermes/personal-assistance-v2/workspaces
@@ -14,8 +18,8 @@ terminal:
   container_cpu: 1
   container_memory: 2048
   container_disk: 10240
-  container_persistent: true
-  docker_persist_across_processes: true
+  container_persistent: false
+  docker_persist_across_processes: false
   docker_orphan_reaper: true
   lifetime_seconds: 300
 
