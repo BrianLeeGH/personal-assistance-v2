@@ -60,9 +60,12 @@ checkpoints:
 plugins:
   enabled:
     - soul-manage
+    - chathub-connector
   disabled: []
 
 platform_toolsets:
+  cli:
+    - chathub
   api_server:
     - browser
     - code_execution
@@ -76,3 +79,4 @@ platform_toolsets:
     - todo
     - vision
     - web
+    - chathub
