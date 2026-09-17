@@ -68,16 +68,7 @@ platform_toolsets:
     - hermes-cli
     - chathub
   api_server:
-    - browser
-    - code_execution
-    - file
-    - image_gen
-    - memory
-    - no_mcp
-    - skills
+    - hermes-api-server
+    - chathub
     - soul
-    - terminal
-    - todo
-    - vision
-    - web
     - chathub
