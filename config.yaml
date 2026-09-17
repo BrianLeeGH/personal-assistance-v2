@@ -65,6 +65,7 @@ plugins:
 
 platform_toolsets:
   cli:
+    - hermes-cli
     - chathub
   api_server:
     - browser
